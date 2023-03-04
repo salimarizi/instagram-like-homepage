@@ -6,7 +6,7 @@ const StoryItem = (props) => {
     <div className="w-16 flex flex-col items-center gap-1">
       <div
         className={
-          "w-16 h-16 border border-secondary rounded-full p-1 " +
+          "story-item w-16 h-16 border border-secondary rounded-full " +
           (!props.seen ? "story-active" : "")
         }
       >

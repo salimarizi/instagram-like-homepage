@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBookmark,
@@ -6,18 +6,37 @@ import {
   faHeart,
   faPaperPlane,
 } from "@fortawesome/free-regular-svg-icons";
+import {
+  faBookmark as faBookmarkSolid,
+  faHeart as faHeartSolid,
+} from "@fortawesome/free-solid-svg-icons";
 
 const FeedActions = (props) => {
+  const [liked, setLiked] = useState(false);
+  const [bookmarked, setBookmarked] = useState(false);
+  const like = () => {
+    setLiked(!liked);
+  };
+  const bookmark = () => {
+    setBookmarked(!bookmarked);
+  };
+
   return (
     <div className="w-full flex flex-col gap-2 px-4">
       <div className="w-full flex items-center">
         <div className="w-full flex items-center gap-3 ">
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon
+            icon={liked ? faHeartSolid : faHeart}
+            onClick={like}
+          />
           <FontAwesomeIcon icon={faCommentAlt} />
           <FontAwesomeIcon icon={faPaperPlane} />
         </div>
         <div className="w-1/12 flex justify-end">
-          <FontAwesomeIcon icon={faBookmark} />
+          <FontAwesomeIcon
+            icon={bookmarked ? faBookmarkSolid : faBookmark}
+            onClick={bookmark}
+          />
         </div>
       </div>
       {props.likes.length > 0 && (

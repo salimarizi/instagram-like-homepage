@@ -7,7 +7,7 @@ import {
   faPaperPlane,
 } from "@fortawesome/free-regular-svg-icons";
 
-const FeedActions = () => {
+const FeedActions = (props) => {
   return (
     <div className="w-full flex flex-col gap-2 px-4">
       <div className="w-full flex">
@@ -20,9 +20,12 @@ const FeedActions = () => {
           <FontAwesomeIcon icon={faBookmark} size="lg" />
         </div>
       </div>
-      <div className="text-xs">
-        Liked by <span className="font-bold">salimarizi</span> and <span className="font-bold">others</span>
-      </div>
+      {props.likes.length > 0 && (
+        <div className="text-xs">
+          Liked by <span className="font-bold">{props.likes[0]}</span> and{" "}
+          <span className="font-bold">others</span>
+        </div>
+      )}
     </div>
   );
 };

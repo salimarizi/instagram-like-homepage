@@ -6,7 +6,7 @@ import { faFacebookMessenger } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="w-full grid grid-cols-5 gap-2 text-white bg-primary">
+    <div className="block md:hidden w-full grid grid-cols-5 gap-2 text-white bg-primary">
       <div className="flex items-center justify-center py-2">
         <FontAwesomeIcon icon={faHome} size="lg" />
       </div>

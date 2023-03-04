@@ -3,7 +3,7 @@ import FeedItem from "./FeedItem";
 
 const Feeds = () => {
   return (
-    <div className="w-full flex flex-col bg-primary text-white gap-3">
+    <div className="w-full md:w-8/12 md:m-auto flex flex-col bg-primary text-white gap-3">
       <FeedItem
         username={"salimarizi"}
         avatar={"./images/salimarizi.jpeg"}

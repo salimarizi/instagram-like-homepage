@@ -3,7 +3,10 @@ import StoryItem from "./StoryItem";
 
 const Stories = () => {
   return (
-    <div className="w-full flex bg-primary text-white p-1 px-2 gap-3 overflow-x-auto">
+    <div
+      className="w-full flex bg-primary text-white p-1 px-2 gap-3 overflow-x-auto"
+      style={{ borderBottom: "0.1px solid gray" }}
+    >
       <StoryItem
         name={"Your story"}
         avatar={"./images/salimarizi.jpeg"}

@@ -20,7 +20,7 @@ const FeedBody = (props) => {
   };
 
   return (
-    <div className="w-full flex bg-blue-400">
+    <div className="w-full flex justify-center">
       {props.contents.length === 1 ? (
         props.contents[0].type === "image" ? (
           <img src={props.contents[0].url} className="block w-full" />

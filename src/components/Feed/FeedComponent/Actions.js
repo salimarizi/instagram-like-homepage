@@ -11,7 +11,7 @@ const FeedActions = (props) => {
   return (
     <div className="w-full flex flex-col gap-2 px-4">
       <div className="w-full flex items-center">
-        <div className="w-full flex items-center gap-3">
+        <div className="w-full flex items-center gap-3 ">
           <FontAwesomeIcon icon={faHeart} />
           <FontAwesomeIcon icon={faCommentAlt} />
           <FontAwesomeIcon icon={faPaperPlane} />

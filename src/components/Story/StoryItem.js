@@ -1,5 +1,5 @@
 import React from "react";
-import "./story.css";
+import "../../styles/story.css";
 
 const StoryItem = (props) => {
   return (

@@ -13,7 +13,7 @@ const StoryItem = (props) => {
         seenStory={props.seenStory}
         location={props.location}
       />
-      <FeedBody />
+      <FeedBody contents={props.contents} />
       <FeedActions likes={props.likes} />
       <FeedCaption
         username={props.username}

@@ -8,19 +8,19 @@ const Footer = () => {
   return (
     <div className="w-full grid grid-cols-5 gap-2 text-white bg-primary">
       <div className="flex items-center justify-center py-2">
-        <FontAwesomeIcon icon={faHome} size="xl" />
+        <FontAwesomeIcon icon={faHome} size="lg" />
       </div>
       <div className="flex items-center justify-center py-2">
-        <FontAwesomeIcon icon={faSearch} size="xl" />
+        <FontAwesomeIcon icon={faSearch} size="lg" />
       </div>
       <div className="flex items-center justify-center py-2">
-        <FontAwesomeIcon icon={faPlayCircle} size="xl" />
+        <FontAwesomeIcon icon={faPlayCircle} size="lg" />
       </div>
       <div className="flex items-center justify-center py-2">
-        <FontAwesomeIcon icon={faFacebookMessenger} size="xl" />
+        <FontAwesomeIcon icon={faFacebookMessenger} size="lg" />
       </div>
       <div className="flex items-center justify-center py-2">
-        <div className="avatar w-8 h-8 rounded-full">
+        <div className="avatar w-7 h-7 rounded-full">
           <img src="./images/salimarizi.jpeg" className="w-full h-full rounded-full" />
         </div>
       </div>

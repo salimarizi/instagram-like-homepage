@@ -9,12 +9,26 @@ const Feeds = () => {
         avatar={"./images/salimarizi.jpeg"}
         seenStory={false}
         location={null}
+        contents={[
+          {
+            type: "image",
+            url: "./images/carousel-1.webp"
+          },
+          {
+            type: "image",
+            url: "./images/carousel-2.webp",
+          },
+          {
+            type: "video",
+            url: "./videos/video.mp4",
+          }
+        ]}
         caption={"Caption from this feed"}
         likes={[]}
         comments={[]}
         time={"35 MINUTES AGO"}
       />
-      <FeedItem
+      {/* <FeedItem
         username={"salimarizi"}
         avatar={"./images/salimarizi.jpeg"}
         seenStory={true}
@@ -23,7 +37,7 @@ const Feeds = () => {
         likes={["salimarizi", "", ""]}
         comments={["", "", ""]}
         time={"17 HOURS AGO"}
-      />
+      /> */}
     </div>
   );
 };

@@ -11,10 +11,10 @@ const Header = () => {
         <span className="font-bold ml-2">Instagram</span>
       </div>
       <div className="w-1/12 text-white py-2">
-        <FontAwesomeIcon icon={faSquarePlus} size="xl" />
+        <FontAwesomeIcon icon={faSquarePlus} size="lg" />
       </div>
       <div className="w-1/12 text-white py-2">
-        <FontAwesomeIcon icon={faHeart} size="xl" />
+        <FontAwesomeIcon icon={faHeart} size="lg" />
       </div>
     </div>
   );

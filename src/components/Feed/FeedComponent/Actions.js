@@ -10,14 +10,14 @@ import {
 const FeedActions = (props) => {
   return (
     <div className="w-full flex flex-col gap-2 px-4">
-      <div className="w-full flex">
-        <div className="w-full flex gap-3">
-          <FontAwesomeIcon icon={faHeart} size="lg" />
-          <FontAwesomeIcon icon={faCommentAlt} size="lg" />
-          <FontAwesomeIcon icon={faPaperPlane} size="lg" />
+      <div className="w-full flex items-center">
+        <div className="w-full flex items-center gap-3">
+          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon icon={faCommentAlt} />
+          <FontAwesomeIcon icon={faPaperPlane} />
         </div>
         <div className="w-1/12 flex justify-end">
-          <FontAwesomeIcon icon={faBookmark} size="lg" />
+          <FontAwesomeIcon icon={faBookmark} />
         </div>
       </div>
       {props.likes.length > 0 && (

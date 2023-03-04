@@ -28,16 +28,22 @@ const Feeds = () => {
         comments={[]}
         time={"35 MINUTES AGO"}
       />
-      {/* <FeedItem
+      <FeedItem
         username={"salimarizi"}
         avatar={"./images/salimarizi.jpeg"}
         seenStory={true}
         location={"Yogyakarta"}
+        contents={[
+          {
+            type: "video",
+            url: "./videos/video.mp4",
+          }
+        ]}
         caption={"Another city in Indonsia"}
         likes={["salimarizi", "", ""]}
         comments={["", "", ""]}
         time={"17 HOURS AGO"}
-      /> */}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../../styles/story.css";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import "../../../styles/story.css";
 
 const FeedHeader = (props) => {
   return (

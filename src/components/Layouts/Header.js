@@ -6,7 +6,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 const Header = () => {
   return (
     <div
-      className="md:hidden w-full flex bg-primary text-white p-1 px-2 gap-3"
+      className="md:hidden w-full flex bg-primary text-white py-1 px-2 gap-3"
       style={{ borderBottom: "0.1px solid gray" }}
     >
       <div className="w-full text-white py-2">

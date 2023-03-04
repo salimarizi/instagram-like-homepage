@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import HomePage from './pages/Home';
 // import CommentPage from './pages/Comment';
+// import SharePage from './pages/Share';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

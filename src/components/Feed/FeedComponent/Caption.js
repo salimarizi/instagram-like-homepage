@@ -15,7 +15,7 @@ const FeedCaption = (props) => {
         </div>
       )}
       <div className="text-gray-400 text-xs">{props.time}</div>
-      <hr />
+      {props.isDetail && <hr />}
       <div className="w-full flex flex-col gap-3">
         {props.isDetail &&
           props.comments.map((comment, index) => {

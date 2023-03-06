@@ -65,7 +65,7 @@ const FeedBody = (props) => {
             onClick={handlePrev}
           >
             <span className="inline-block h-8 w-8">
-              <img src="./images/prev.svg" />
+              <img src="/images/prev.svg" />
             </span>
             <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
               Previous
@@ -79,7 +79,7 @@ const FeedBody = (props) => {
             onClick={handleNext}
           >
             <span className="inline-block h-8 w-8">
-              <img src="./images/next.svg" />
+              <img src="/images/next.svg" />
             </span>
             <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
               Next

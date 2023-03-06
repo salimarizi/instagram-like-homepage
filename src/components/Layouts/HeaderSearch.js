@@ -4,7 +4,7 @@ import { faSearch, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-const Header = () => {
+const HeaderSearch = () => {
   const [isActiveSearch, setIsActiveSearch] = useState(false);
 
   return (
@@ -33,4 +33,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderSearch;

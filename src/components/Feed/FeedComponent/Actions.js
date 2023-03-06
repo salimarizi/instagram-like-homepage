@@ -10,6 +10,7 @@ import {
   faBookmark as faBookmarkSolid,
   faHeart as faHeartSolid,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const FeedActions = (props) => {
   const [liked, setLiked] = useState(false);
@@ -29,8 +30,12 @@ const FeedActions = (props) => {
             icon={liked ? faHeartSolid : faHeart}
             onClick={like}
           />
-          <FontAwesomeIcon icon={faCommentAlt} />
+          <Link to="/comments/1">
+            <FontAwesomeIcon icon={faCommentAlt} />
+          </Link>
+          <Link to="/share/1">
           <FontAwesomeIcon icon={faPaperPlane} />
+          </Link>
         </div>
         <div className="w-1/12 flex justify-end">
           <FontAwesomeIcon

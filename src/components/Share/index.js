@@ -18,27 +18,27 @@ const Share = () => {
         <UserList
           username={"salimarizi"}
           name={"Salim Arizi"}
-          avatar={"./images/salimarizi.jpeg"}
+          avatar={"/images/salimarizi.jpeg"}
         />
         <UserList
           username={"salimarizi"}
           name={"Salim Arizi"}
-          avatar={"./images/salimarizi.jpeg"}
+          avatar={"/images/salimarizi.jpeg"}
         />
         <UserList
           username={"salimarizi"}
           name={"Salim Arizi"}
-          avatar={"./images/salimarizi.jpeg"}
+          avatar={"/images/salimarizi.jpeg"}
         />
         <UserList
           username={"salimarizi"}
           name={"Salim Arizi"}
-          avatar={"./images/salimarizi.jpeg"}
+          avatar={"/images/salimarizi.jpeg"}
         />
         <UserList
           username={"salimarizi"}
           name={"Salim Arizi"}
-          avatar={"./images/salimarizi.jpeg"}
+          avatar={"/images/salimarizi.jpeg"}
         />
       </div>
     </div>

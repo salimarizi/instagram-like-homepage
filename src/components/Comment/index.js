@@ -11,7 +11,6 @@ const Comment = (props) => {
 
   useEffect(() => {
     props.getSelectedFeed(feedId);
-    console.log(props.feed_data)
   }, []);
 
   return (

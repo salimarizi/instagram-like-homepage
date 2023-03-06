@@ -1,4 +1,35 @@
-# Getting Started with Create React App
+# Instagram Like Home Page
+
+This project is just for experiment duplicating Instagram Home Page.
+It's using React and Redux.
+
+There will be 3 different layouts depends on the device that used to access this Page.
+
+1. Mobile Layout
+![Mobile View](https://github.com/salimarizi/instagram-like-homepage/blob/main/public/images/screenshot-mobile.png?raw=true)
+
+2. Tablet Layout
+![Tablet View](https://github.com/salimarizi/instagram-like-homepage/blob/main/public/images/screenshot-tablet.png?raw=true)
+
+3. Desktop Layout
+![Desktop View](https://github.com/salimarizi/instagram-like-homepage/blob/main/public/images/screenshot-desktop.png?raw=true)
+
+
+## How to run this project
+There are two ways to run this project on your local.
+
+### Using Docker
+1. Clone the project
+2. Go to project root by terminal
+3. Make a new container by running this command `docker build . -t instagram-like`
+4. Then run it by typing this command `docker run -p 3000:3000 -d instagram-like`
+
+### Using NPM
+1. Clone the project
+2. Go to project root by terminal
+3. Run `npm install` to install all necessary libraries
+4. Run `npm start` to activate the apps.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

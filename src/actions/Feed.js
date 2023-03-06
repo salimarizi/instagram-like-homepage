@@ -5,10 +5,10 @@ import {
 } from "../constants";
 import axios from "../utils/Api";
 
-export const getFeeds = (search = "") => {
+export const getFeeds = () => {
   return (dispatch) => {
     return axios
-      .get("feeds", { params: { q: search } })
+      .get("feeds")
       .then(({ data }) => {
         dispatch({ type: GET_ALL_FEEDS, payload: data.record.data });
       })
@@ -23,11 +23,10 @@ export const getSelectedFeed = (feedId) => {
     return axios
       .get(`feeds/${feedId}`)
       .then(({ data }) => {
-        if (data) dispatch({ type: GET_SELECTED_FEED, payload: data.data });
-        else dispatch({ type: FETCH_ERROR, payload: data.error });
+        dispatch({ type: GET_SELECTED_FEED, payload: data.record.data });
       })
       .catch((error) => {
-        throw error;
+        dispatch({ type: FETCH_ERROR, payload: error });
       });
   };
 };

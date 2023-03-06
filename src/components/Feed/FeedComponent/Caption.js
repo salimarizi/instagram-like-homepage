@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../styles/story.css";
+import formatTime from "../../../utils/TimeFormatter";
 
 const FeedCaption = (props) => {
   return (
@@ -14,11 +15,12 @@ const FeedCaption = (props) => {
           View all {props.comments.length} comments
         </div>
       )}
-      <div className="text-gray-400 text-xs">{props.time}</div>
+      <div className="text-gray-400 text-xs">{formatTime(props.time)}</div>
       {props.isDetail && <hr />}
       <div className="w-full flex flex-col gap-3">
         {props.isDetail &&
           props.comments.map((comment, index) => {
+            console.log(comment.profile_picture);
             return (
               <div className="w-full flex items-center gap-2" key={index}>
                 <div
@@ -28,7 +30,7 @@ const FeedCaption = (props) => {
                   }
                 >
                   <img
-                    src={comment.avatar}
+                    src={comment.profile_picture}
                     className="w-full h-full rounded-full"
                   />
                 </div>
@@ -36,7 +38,7 @@ const FeedCaption = (props) => {
                   <span className="font-bold">{comment.username}</span>{" "}
                   {comment.content}
                   <br />
-                  <span className="text-xs text-gray-400">{comment.time}</span>
+                  <span className="text-xs text-gray-400">{formatTime(comment.time)}</span>
                 </div>
               </div>
             );

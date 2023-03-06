@@ -11,6 +11,10 @@ const INIT_STATE = {
       full_name: "",
     },
     images: [],
+    caption: {
+      text: ""
+    },
+    comments: []
   },
 };
 

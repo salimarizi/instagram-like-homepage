@@ -18,8 +18,8 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/:feedId/comments" element={<CommentPage />} />
-        <Route path="/:feedId/share" element={<SharePage />} />
+        <Route path="/comments/:feedId" element={<CommentPage />} />
+        <Route path="/share/:feedId" element={<SharePage />} />
       </Routes>
     </Router>
   </Provider>

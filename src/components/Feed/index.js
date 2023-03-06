@@ -13,16 +13,7 @@ const Feeds = (props) => {
   return (
     <div className="w-full md:w-8/12 md:m-auto flex flex-col bg-primary text-white gap-3">
       {props.feeds_data.map((feed, index) => {
-        const contents =
-          feed.images.length > 0
-            ? [
-                {
-                  type: "image",
-                  url: feed.images.standard_resolution.url,
-                },
-              ]
-            : [];
-        
+
         const likes = feed.user_has_liked ? ["salimarizi", "", ""] : [];
 
         const comments = feed.comments ? feed.comments : [];
@@ -31,9 +22,9 @@ const Feeds = (props) => {
           <FeedItem
             username={feed.user.username}
             avatar={feed.user.profile_picture}
-            seenStory={true}
+            seenStory={false}
             location={feed.location}
-            contents={contents}
+            contents={feed.contents}
             caption={feed.caption.text}
             likes={likes}
             comments={comments}
@@ -42,32 +33,6 @@ const Feeds = (props) => {
           />
         );
       })}
-
-      {/* For example purpose */}
-      <FeedItem
-        username={"salimarizi"}
-        avatar={"./images/salimarizi.jpeg"}
-        seenStory={false}
-        location={null}
-        contents={[
-          {
-            type: "image",
-            url: "./images/carousel-1.webp",
-          },
-          {
-            type: "image",
-            url: "./images/carousel-2.webp",
-          },
-          {
-            type: "video",
-            url: "./videos/video.mp4",
-          },
-        ]}
-        caption={"Caption from this feed"}
-        likes={[]}
-        comments={[]}
-        time={"35 MINUTES AGO"}
-      />
     </div>
   );
 };

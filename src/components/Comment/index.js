@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FeedCaption from "../Feed/FeedComponent/Caption";
 
-const Comment = () => {
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { getSelectedFeed } from "../../actions/Feed";
+import { useParams } from "react-router-dom";
+
+const Comment = (props) => {
+  const { feedId } = useParams();
+
+  useEffect(() => {
+    props.getSelectedFeed(feedId);
+    console.log(props.feed_data)
+  }, []);
+
   return (
     <div className="text-white">
       <div className="w-full flex p-3 gap-3 bg-secondary mb-3">
@@ -11,7 +23,7 @@ const Comment = () => {
           }
         >
           <img
-            src={"./images/salimarizi.jpeg"}
+            src={props.feed_data.user.profile_picture}
             className="w-full h-full rounded-full"
           />
         </div>
@@ -31,35 +43,21 @@ const Comment = () => {
       </div>
       <FeedCaption
         isDetail={true}
-        username={"salimarizi"}
-        caption="Another city in Indonesia"
-        comments={[
-          {
-            username: "salimarizi",
-            content: "this is good",
-            time: "5 MINUTES AGO",
-            seenStory: true,
-            avatar: "./images/salimarizi.jpeg",
-          },
-          {
-            username: "salimarizi",
-            content: "Wonderful!",
-            time: "5 MINUTES AGO",
-            seenStory: false,
-            avatar: "./images/salimarizi.jpeg",
-          },
-          {
-            username: "salimarizi",
-            content: "Great!",
-            time: "5 MINUTES AGO",
-            seenStory: true,
-            avatar: "./images/salimarizi.jpeg",
-          },
-        ]}
-        time="7 HOURS AGO"
+        username={props.feed_data.user.username}
+        caption={props.feed_data.caption.text}
+        comments={props.feed_data.comments}
+        time={props.feed_data.created_time}
       />
     </div>
   );
 };
 
-export default Comment;
+const mapStateToProps = (state) => ({
+  feed_data: state.FeedReducer.feed_data,
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ getSelectedFeed }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Comment);

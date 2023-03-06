@@ -23,7 +23,9 @@ const Comment = () => {
               autoComplete="off"
               placeholder="Add a comment..."
             />
-            <button className="w-2/12 text-sm text-blue-200 font-bold">Post</button>
+            <button className="w-2/12 text-sm text-blue-200 font-bold">
+              Post
+            </button>
           </div>
         </div>
       </div>

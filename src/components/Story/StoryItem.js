@@ -12,7 +12,9 @@ const StoryItem = (props) => {
       >
         <img src={props.avatar} className="w-full h-full rounded-full" />
       </div>
-      <span className="text-xs text-gray-400">{props.name}</span>
+      <span className="text-xs text-gray-400">
+        {props.name.length > 10 ? props.name.substr(0, 10) + "..." : props.name}
+      </span>
     </div>
   );
 };

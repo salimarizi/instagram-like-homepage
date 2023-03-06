@@ -1,7 +1,12 @@
 # Instagram Like Home Page
 
 This project is just for experiment duplicating Instagram Home Page.
-It's using React and Redux.
+
+## Used Technology
+This project used:
+1. React v18
+2. Redux v8
+3. Apiary (to get dummy API)
 
 There will be 3 different layouts depends on the device that used to access this Page.
 
